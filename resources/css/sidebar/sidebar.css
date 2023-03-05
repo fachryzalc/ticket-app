@@ -1,0 +1,135 @@
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+    --biggestFOntSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.24rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+body,
+html {
+    height: 100%;
+}
+
+.sideBar {
+    background: var(--whiteColor);
+    box-shadow: 1px 0px 4px var(--greyText);
+    width: 15%;
+    height: 100%;
+    overflow: auto;
+}
+
+.sideBar .menuDiv .divTitle,
+.sideBar .divTitle {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: var(--h3FontSize);
+    color: var(--blackColor);
+    padding: 0 0rem 1.5rem;
+}
+.sideBar .menuDiv .menuLists .listItem,
+.sideBar .menuLists .listItem {
+    margin-left: -2rem;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+.sideBar .menuDiv .menuLists .listItem::before,
+.sideBar .menuLists .listItem::before {
+    position: absolute;
+    content: "";
+    height: 0%;
+    left: 0;
+    width: 5px;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--PrimaryColor);
+}
+.sideBar .menuDiv .menuLists .listItem .menuLink,
+.sideBar .menuLists .listItem .menuLink {
+    color: var(--greyText);
+    font-weight: 500;
+    transition: 0;
+}
+.sideBar .menuDiv .menuLists .listItem .menuLink .icon,
+.sideBar .menuLists .listItem .menuLink .icon {
+    margin-right: 0.5rem;
+}
+.sideBar .menuDiv .menuLists .listItem:hover .menuLink,
+.sideBar .menuLists .listItem:hover .menuLink {
+    color: var(--PrimaryColor);
+    transition: 0;
+}
+
+.sideBar .menuDiv .menuLists .listItem .active::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    left: 0%;
+    width: 5px;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--PrimaryColor);
+}
+
+.sideBar .menuDiv .menuLists .listItem .active {
+    color: var(--PrimaryColor);
+}
+
+.sideBar .menuDiv .menuLists .listItem:hover::before,
+.sideBar .menuLists .listItem:hover::before {
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.sideBar .menuDiv .menuLists .sublistItem {
+    margin-left: 1rem;
+    margin-top: -2rem;
+    width: auto;
+    position: relative;
+}
+
+.sideBar .menuDiv .menuLists .sublistItem .submenuText {
+    color: var(--greyText);
+    font-size: var(--smallFontSize);
+}
+
+@media screen and (max-width: 930px) {
+    .sideBar .logoDiv {
+        text-align: center;
+        margin: auto;
+        padding: 1.5rem 0.5rem 0;
+    }
+    .sideBar .logoDiv i {
+        font-size: var(--h3FontSize);
+    }
+}
+@media screen and (max-width: 900px) {
+    .sideBar .divTitle,
+    .sideBar .smallText {
+        display: none;
+    }
+    .sideBar .menuLists {
+        justify-content: center;
+        padding-left: 0.5rem;
+    }
+    .sideBar .menuLists .icon {
+        font-size: var(--h1FontSize);
+    }
+}
+@media screen and (max-width: 480px) {
+    .sideBar .logoDiv {
+        display: none;
+    }
+} /*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,64 @@
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+    --itemCardColor: hsl(120, 5%, 88%);
+    --itemCardHover: hsl(120, 27%, 87%);
+
+    --biggestFOntSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.24rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+body {
+    background: var(--bgColor);
+}
+a .icon {
+    text-decoration: none;
+    color: var(--blackColor);
+}
+.mainContent {
+    width: 85%;
+    height: 100%;
+    overflow: auto;
+    gap: 2rem;
+    align-items: flex-start;
+    background: var(--inputColor);
+    border-radius: 0px 0px 50px 0px;
+}
+
+.topContent {
+    width: 100%;
+    background: var(--paleGreen);
+    height: 6%;
+    justify-content: flex-end;
+}
+.topContent .headerContent {
+    align-items: center;
+}
+
+.topContent .headerContent .icon {
+    margin-right: 1rem;
+    font-size: var(--h1FontSize);
+}
+
+.bottomContent {
+    background: var(--itemCardColor);
+    height: 94%;
+}
+
+@media screen and (max-width: 918px) {
+    .bottom {
+        flex-direction: column;
+    }
+} /*# sourceMappingURL=body.css.map */

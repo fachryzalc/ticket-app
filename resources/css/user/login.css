@@ -1,0 +1,148 @@
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.24rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+body,
+html {
+    background: var(--bgColor);
+    height: 100%;
+}
+
+.login-box {
+    border-radius: 10px;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--whiteColor);
+}
+
+.login-box .title1 {
+    font-size: var(--h2FontSize);
+    font-weight: 800;
+    color: var(--blackColor);
+}
+
+.login-box .title2 {
+    font-size: var(--h3FontSize);
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.input {
+    margin-top: 1rem;
+}
+
+.input .username {
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--inputColor);
+    padding: 0.8rem 1rem;
+    color: var(--textColor);
+}
+
+.input .password {
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--inputColor);
+    padding: 0.8rem 1rem;
+    color: var(--textColor);
+    margin-top: 1rem;
+}
+
+.input .btn {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    color: var(--greyText);
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--greyText);
+}
+
+::placeholder {
+    color: var(--greyText);
+}
+
+.login-box .register {
+    margin-top: 1rem;
+    font-size: var(--normalFontSize);
+    color: var(--textColor);
+}
+
+.login-box .register .register-link {
+    color: var(--PrimaryColor);
+}
+
+@media screen and (max-width: 990px) {
+    .heading {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .heading {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.is-invalid {
+    border: 2px solid red;
+}
+
+.is-invalid::-webkit-input-placeholder {
+    /* Edge */
+    color: red;
+}
+
+.is-invalid:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: red;
+}
+
+.is-invalid::placeholder {
+    color: red;
+}
+
+.invalid-feedback {
+    font-size: var(--smallestFontSize);
+    text-align: start;
+    color: red;
+}

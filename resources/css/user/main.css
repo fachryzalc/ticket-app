@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+    --biggestFOntSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.24rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+html {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--inputColor);
+    padding: 0.8rem 1rem;
+    color: var(--textColor);
+}
+
+.btn:hover {
+    background: var(--paleGreen);
+    color: var(--PrimaryColor);
+}
+
+.nav {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.nav .navContainer {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+.navMenu {
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0px 0px 0px 30px;
+    padding: 0 24px;
+    max-width: 1300px;
+    justify-content: end;
+}
+.nav .navContainer .navItem {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    gap: 1rem;
+}
+
+.nav .navContainer .navItem .navLinks {
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav .navContainer .navItem .navLinks:hover {
+    border-bottom: 3px solid var(--PrimaryColor);
+    font-weight: bold;
+}
+
+.nav .navContainer .navItem .active {
+    font-weight: bold;
+    border-bottom: 3px solid var(--PrimaryColor);
+}
+
+.container {
+    max-width: 1920px;
+    padding: 2rem;
+    margin-left: 4rem;
+}
+
+.container .upcomming {
+    text-transform: uppercase;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+.container .item {
+    width: 30%;
+    display: flex;
+    float: left;
+    padding: 0 20px;
+    background: var(--bgColor);
+    overflow: hidden;
+    margin: 10px;
+}
+.container .item-right,
+.container .item-left {
+    padding: 10px;
+}
+.container .item-right {
+    padding: 79px 60px;
+    margin-right: 20px;
+    width: 10%;
+    position: relative;
+    height: 300px;
+}
+.container .item-right .up-border,
+.container .item-right .down-border {
+    padding: 14px 15px;
+    background-color: var(--whiteColor);
+    border-radius: 50%;
+    position: absolute;
+}
+.container .item-right .up-border {
+    top: -8px;
+    right: -35px;
+}
+.container .item-right .down-border {
+    bottom: -13px;
+    right: -35px;
+}
+.container .item-right .num {
+    font-size: 60px;
+    text-align: center;
+    color: #111;
+    margin-left: -2rem;
+}
+
+.container .item-right .day,
+.container .item-left .event {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 9px;
+    margin-left: -2rem;
+    position: relative;
+}
+.container .item-left .event {
+    position: relative;
+    float: right;
+    top: -1rem;
+    color: red;
+}
+.container .item-right .day {
+    text-align: center;
+    font-size: 25px;
+}
+.container .item-left {
+    width: 71%;
+    padding: 34px 0px 19px 46px;
+    border-left: 3px dotted #999;
+}
+.container .item-left .title {
+    color: #111;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+.container .item-left .sce {
+    margin-top: 5px;
+    display: block;
+}
+.container .item-left .sce .icon,
+.container .item-left .sce p,
+.container .item-left .loc .icon,
+.container .item-left .loc p {
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 10px;
+}
+.container .item-left .sce .icon,
+.container .item-left .loc .icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #666;
+}
+.container .item-left .loc {
+    display: block;
+}
+.fix {
+    clear: both;
+}
+.container .item .tickets,
+.booked,
+.cancel {
+    color: #fff;
+    padding: 6px 14px;
+    float: right;
+    margin-top: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.container .item .tickets {
+    background: #777;
+}
+.container .item .booked {
+    background: #3d71e9;
+}
+.container .item .cancel {
+    background: #df5454;
+}
+.linethrough {
+    text-decoration: line-through;
+}
+@media only screen and (max-width: 1150px) {
+    .container .item {
+        width: 100%;
+        margin-right: 20px;
+    }
+    div.container {
+        margin: 0 20px auto;
+    }
+}
